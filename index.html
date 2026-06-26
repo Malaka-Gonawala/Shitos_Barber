@@ -3,36 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shitos Barber - Stile Urbano & Taglio Professionale</title>
-    <!-- Google Fonts: Outfit -->
+    <title>Shitos Barber — Fresh Cuts. Neon Nights. | Milano</title>
+    <meta
+      name="description"
+      content="Shitos Barber Milano — Taglio professionale, sfumature e stile urbano. Viale Monte Ceneri, 36."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- Navigation -->
     <header id="Header">
       <div id="Nav-Container">
-        <div id="Logo-Container">
-          <img
-            src="img/shitos-logo.jpg"
-            alt="Logo Shitos Barber"
-            id="Shitos-Logo"
-          />
-        </div>
+        <a href="#home" class="nav-brand">
+          <img src="img/shitos-logo.jpg" alt="">
+        </a>
         <nav id="Nav-Links">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#servizi" class="nav-link">Servizi</a>
-          <a href="#galleria" class="nav-link">Galleria</a>
-          <a href="#chi-siamo" class="nav-link">Chi Siamo</a>
-          <a href="#recensioni" class="nav-link">Recensioni</a>
-          <a href="#posizione" class="nav-link">Dove Siamo</a>
-          <a href="#social" class="nav-link">Social</a>
+          <a href="#services" class="nav-link">SERVICES</a>
+          <a href="#work" class="nav-link">GALLERY</a>
+          <a href="#visit" class="nav-link">VISIT</a>
         </nav>
-        <button id="Hamburger-Btn" aria-label="Apri menu">
+        <a href="tel:+393899357249" class="nav-book-btn">
+          <span class="book-icon">📞</span> BOOK
+        </a>
+        <button id="Hamburger-Btn" aria-label="Open menu">
           <span></span>
           <span></span>
           <span></span>
@@ -40,262 +39,181 @@
       </div>
     </header>
 
+    <!-- Mobile Menu Overlay -->
     <div id="Mobile-Menu">
       <nav id="Mobile-Links">
         <a href="#home" class="mobile-link">Home</a>
-        <a href="#servizi" class="mobile-link">Servizi</a>
-        <a href="#galleria" class="mobile-link">Galleria</a>
-        <a href="#chi-siamo" class="mobile-link">Chi Siamo</a>
-        <a href="#recensioni" class="mobile-link">Recensioni</a>
-        <a href="#posizione" class="mobile-link">Dove Siamo</a>
-        <a href="#social" class="mobile-link">Social</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#work" class="mobile-link">Gallery</a>
+        <a href="#visit" class="mobile-link">Visit</a>
+        <a href="tel:+393899357249" class="mobile-link mobile-book">Book Now</a>
       </nav>
     </div>
 
     <main>
-      <section id="home" class="hero-section">
-        <div class="hero-content">
-          <div class="hero-logo-large">
-            <img src="img/shitos-logo.jpg" alt="Shitos Barber Grande" />
-          </div>
-          <h1>SHITOS BARBER</h1>
-          <p class="hero-subtitle">
-            Stile urbano, tagli classici e moderni. L'esperienza definitiva del
-            grooming a Milano.
+      <!-- ===== HERO ===== -->
+      <section id="home" class="hero">
+        <div class="hero-text">
+          <p class="hero-location">MILANO · VIALE MONTE CENERI</p>
+          <h1 class="hero-title">
+            FRESH CUTS.<br /><span class="text-red">NEON NIGHTS.</span>
+          </h1>
+          <p class="hero-desc">
+            A modern Milano barbershop — bold lighting, sharp fades, and a chair
+            that's always ready for you.
           </p>
-          <a href="#servizi" class="btn-primary">Esplora i Servizi</a>
+          <div class="hero-ctas">
+            <a href="tel:+393899357249" class="btn btn-fill">
+              <span class="btn-icon">📞</span> CALL TO BOOK
+            </a>
+            <a href="#work" class="btn btn-outline">SEE THE WORK</a>
+          </div>
+          <div class="hero-rating">
+            <span class="stars">★ ★ ★ ★ ☆</span>
+            <span class="rating-text">4.2 on Google</span>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="img/shitos-logo.jpg"
+            alt="Shitos Barber — taglio in corso"
+          />
         </div>
       </section>
 
-      <section id="servizi" class="services-section">
-        <div class="section-container">
-          <h2 class="section-title">Servizi & Prezzi</h2>
-          <p class="section-desc">
-            Tagli di capelli, trattamenti barba e pacchetti speciali eseguiti
-            dai nostri professionisti.
-          </p>
+      <!-- ===== SERVICES ===== -->
+      <section id="services" class="services">
+        <div class="section-wrap">
+          <div class="services-header">
+            <div class="services-header-left">
+              <p class="section-label">WHAT WE DO</p>
+              <h2 class="section-heading">THE SERVICES</h2>
+            </div>
+            <p class="services-header-right">
+              From clean skin fades to custom line designs — every cut is
+              dialled in to your style.
+            </p>
+          </div>
           <div class="services-grid">
             <div class="service-card">
-              <span class="service-icon">✂️</span>
-              <h3>Taglio Capelli</h3>
-              <p>
-                Taglio classico o moderno eseguito a forbice e sfumatura
-                regolata con macchinetta, inclusa consulenza d'immagine.
+              <div class="card-top">
+                <span class="card-number">01</span>
+                <span class="card-icon">✂</span>
+              </div>
+              <h3 class="card-title">TAPER & FADE</h3>
+              <p class="card-desc">
+                Skin fades, low and mid tapers, textured tops — clean every
+                time.
               </p>
-              <div class="price">€20.00</div>
             </div>
             <div class="service-card">
-              <span class="service-icon">🪒</span>
-              <h3>Regolazione Barba</h3>
-              <p>
-                Modellatura della barba rifinita a mano libera con rasoio, panno
-                caldo rigenerante e oli speciali profumati.
+              <div class="card-top">
+                <span class="card-number">02</span>
+                <span class="card-icon">✂</span>
+              </div>
+              <h3 class="card-title">LINE-UP & DESIGN</h3>
+              <p class="card-desc">
+                Razor-sharp edges and custom hair designs on request.
               </p>
-              <div class="price">€15.00</div>
             </div>
             <div class="service-card">
-              <span class="service-icon">🔥</span>
-              <h3>Servizio Completo</h3>
-              <p>
-                Il trattamento definitivo: taglio capelli personalizzato e
-                regolazione barba completa con massaggio facciale rilassante.
+              <div class="card-top">
+                <span class="card-number">03</span>
+                <span class="card-icon">✂</span>
+              </div>
+              <h3 class="card-title">BEARD & STYLE</h3>
+              <p class="card-desc">
+                Beard shaping, line work and styling to finish the look.
               </p>
-              <div class="price">€32.00</div>
-            </div>
-            <div class="service-card">
-              <span class="service-icon">💆‍♂️</span>
-              <h3>Trattamento Viso</h3>
-              <p>
-                Pulizia profonda con maschera nera al carbone attivo e
-                applicazione di panno freddo lenitivo.
-              </p>
-              <div class="price">€12.00</div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="galleria" class="gallery-section">
-        <div class="section-container">
-          <h2 class="section-title">Galleria</h2>
-          <p class="section-desc">
-            Il nostro spazio urbano, l'atmosfera industrial e i nostri migliori
-            lavori prima e dopo.
-          </p>
-          <div class="gallery-grid">
-            <div class="gallery-item interior">
-              <div class="gallery-overlay">
-                <h4>Interno Salone</h4>
-                <p>
-                  Un ambiente urban-industrial con sedute vintage e luci neon.
-                </p>
+      <!-- ===== WORK / GALLERY ===== -->
+      <section id="work" class="work">
+        <div class="section-wrap">
+          <p class="section-label">THE WORK</p>
+          <h2 class="section-heading">STRAIGHT FROM THE CHAIR.</h2>
+          <div class="work-grid">
+            <div class="work-item work-tall">
+              <div class="work-placeholder">
+                <img src="img/shitos-logo.jpg" alt="Taglio 1" />
               </div>
             </div>
-            <div class="gallery-item before-after">
-              <div class="gallery-overlay">
-                <h4>Prima / Dopo</h4>
-                <p>Sfumature ad alta precisione e cambi di look radicali.</p>
+            <div class="work-item work-featured">
+              <div class="work-placeholder">
+                <img src="img/shitos-word.png" alt="Taglio 2" />
               </div>
             </div>
-            <div class="gallery-item work">
-              <div class="gallery-overlay">
-                <h4>Stile & Tagli</h4>
-                <p>Grafiche nei capelli e modellature barba geometriche.</p>
+            <div class="work-item work-tall">
+              <div class="work-placeholder">
+                <img src="img/shitos-logo.jpg" alt="Taglio 3" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="chi-siamo" class="about-section">
-        <div class="section-container">
-          <h2 class="section-title">Chi Siamo</h2>
-          <div class="about-content">
-            <div class="about-text">
-              <h3>La Nostra Storia & Vibe</h3>
-              <p>
-                Nato nel cuore della cultura urbana milanese, Shitos Barber non
-                è solo un salone di barbiere, ma un vero e proprio punto di
-                ritrovo per gli amanti dello stile di strada e del grooming di
-                precisione.
-              </p>
-              <p>
-                Il nostro locale combina l'estetica industriale e i graffiti
-                murali con l'energia vibrante delle luci al neon a soffitto,
-                creando un'atmosfera unica dove rilassarsi, ascoltare buona
-                musica hip-hop e rifarsi il look.
-              </p>
-              <h3>La Nostra Missione</h3>
-              <p>
-                La nostra missione è garantire che ogni cliente che varca la
-                nostra porta ne esca con la massima fiducia in se stesso.
-                Utilizziamo solo prodotti premium e tecniche all'avanguardia per
-                offrirti sfumature perfette e barbe modellate ad arte.
-              </p>
+      <!-- ===== VISIT ===== -->
+      <section id="visit" class="visit">
+        <div class="section-wrap">
+          <p class="section-label">VISIT</p>
+          <h2 class="section-heading">STOP BY THE SHOP.</h2>
+          <div class="visit-info">
+            <div class="visit-col">
+              <span class="visit-icon">📍</span>
+              <h4>ADDRESS</h4>
+              <p>Viale Monte Ceneri, 36<br />20155 Milano MI, Italy</p>
+              <a
+                href="https://maps.google.com/?q=Viale+Monte+Ceneri+36+Milano"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="visit-link"
+                >Get directions ↗</a
+              >
             </div>
-            <div class="about-vibe-box">
-              <div class="vibe-card">
-                <h4>LUCI NEON</h4>
-                <p>Energia urbana pura</p>
-              </div>
-              <div class="vibe-card">
-                <h4>MUSICA RAP</h4>
-                <p>Il ritmo del salone</p>
-              </div>
-              <div class="vibe-card">
-                <h4>STILE UNICO</h4>
-                <p>Nessun compromesso</p>
-              </div>
+            <div class="visit-col">
+              <span class="visit-icon">🕐</span>
+              <h4>HOURS</h4>
+              <p>Mon – Sat<br />9 AM – 9 PM</p>
+            </div>
+            <div class="visit-col">
+              <span class="visit-icon">📞</span>
+              <h4>PHONE</h4>
+              <p>+39 389 935 7249</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section id="recensioni" class="reviews-section">
-        <div class="section-container">
-          <h2 class="section-title">Dicono di Noi</h2>
-          <p class="section-desc">
-            Cosa dicono i nostri clienti della loro esperienza da Shitos Barber.
-          </p>
-          <div class="reviews-grid">
-            <div class="review-card">
-              <div class="review-rating">⭐⭐⭐⭐⭐</div>
-              <p class="review-text">
-                "Sfumatura a rasoio pazzesca! Il barbiere è un vero artista e
-                l'atmosfera con i neon rossi e blu è incredibile. Ci tornerò
-                sicuramente!"
-              </p>
-              <div class="review-author">- Marco R.</div>
-            </div>
-            <div class="review-card">
-              <div class="review-rating">⭐⭐⭐⭐⭐</div>
-              <p class="review-text">
-                "Trattamento barba con panno caldo favoloso. Relax totale e
-                prodotti di qualità che lasciano la pelle morbidissima.
-                Consigliatissimo."
-              </p>
-              <div class="review-author">- Alessandro V.</div>
-            </div>
-            <div class="review-card">
-              <div class="review-rating">⭐⭐⭐⭐⭐</div>
-              <p class="review-text">
-                "Locale fantastico, stile urbano ricercato ed accoglienza super.
-                Il miglior taglio di capelli che abbia mai fatto a Milano."
-              </p>
-              <div class="review-author">- Davide L.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="posizione" class="location-section">
-        <div class="section-container">
-          <h2 class="section-title">Dove Siamo</h2>
-          <div class="location-grid">
-            <div class="location-info">
-              <div class="info-item">
-                <h4>📍 Indirizzo</h4>
-                <p>Via Urbano, 12, 20121 Milano (MI)</p>
-              </div>
-              <div class="info-item">
-                <h4>📞 Contatti</h4>
-                <p>
-                  Telefono: +39 02 123 4567<br />Email: info@shitosbarber.it
-                </p>
-              </div>
-              <div class="info-item">
-                <h4>🕒 Orari</h4>
-                <p>
-                  Martedì - Sabato: 09:30 - 19:30<br />Domenica - Lunedì: Chiuso
-                </p>
-              </div>
-            </div>
-            <div class="location-map">
-              <div class="mock-map">
-                <div class="map-pin"></div>
-                <div class="map-label">Shitos Barber</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="social" class="social-section">
-        <div class="section-container">
-          <h2 class="section-title">Seguici sui Social</h2>
-          <p class="section-desc">
-            Rimani aggiornato sui nostri ultimi tagli, eventi e offerte
-            speciali.
-          </p>
-          <div class="social-buttons">
-            <a
-              href="https://www.instagram.com/shitosbarber"
-              class="social-btn instagram"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="social-icon">📸</span> Instagram
-            </a>
-            <a
-              href="https://www.tiktok.com/@shitosbarber"
-              class="social-btn tiktok"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="social-icon">🎵</span> TikTok
-            </a>
-            <a
-              href="https://wa.me/39021234567"
-              class="social-btn whatsapp"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="social-icon">💬</span> WhatsApp
-            </a>
+          <div class="visit-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.5!2d9.1525!3d45.4925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c14b5e5c4b47%3A0x0!2sViale%20Monte%20Ceneri%2C%2036%2C%2020155%20Milano%20MI!5e0!3m2!1sit!2sit!4v1"
+              width="100%"
+              height="400"
+              style="
+                border: 0;
+                filter: invert(90%) hue-rotate(180deg) brightness(0.7)
+                  contrast(1.2);
+              "
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mappa Shitos Barber Milano"
+            ></iframe>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer-wrap">
+        <div class="footer-brand">
+          <span class="brand-icon">✂</span>
+          <span class="brand-text">SHITOS BARBER</span>
+        </div>
+        <p class="footer-copy">© 2026 Shitos Barber · Milano</p>
+      </div>
+    </footer>
 
     <script src="js/script.js"></script>
   </body>

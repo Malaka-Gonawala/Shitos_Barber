@@ -33,7 +33,7 @@ window.addEventListener("DOMContentLoaded", handleScroll);
 // Run once immediately in case scripts load late
 handleScroll();
 
-// Mobile Hamburger Menu Functionality
+// ── Mobile Hamburger Menu ──
 const hamburgerBtn = document.querySelector("#Hamburger-Btn");
 const mobileMenu = document.querySelector("#Mobile-Menu");
 const mobileLinks = document.querySelectorAll(".mobile-link");
@@ -43,11 +43,7 @@ const toggleMobileMenu = () => {
   hamburgerBtn.classList.toggle("open", isOpen);
 
   // Prevent background scrolling when menu is open
-  if (isOpen) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
-  }
+  document.body.style.overflow = isOpen ? "hidden" : "";
 };
 
 hamburgerBtn.addEventListener("click", toggleMobileMenu);
