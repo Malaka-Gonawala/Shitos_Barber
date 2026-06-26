@@ -75,6 +75,10 @@ const galleryMedia = [
     src: "assets/video/ssstik.io_@shitosbarber_1782501436302.mp4",
   },
   {
+    type: "video",
+    src: "assets/video/ssstik.io_@shitosbarber_1782502453499.mp4",
+  },
+  {
     type: "image",
     src: "assets/img/WhatsApp Image 2026-06-26 at 20.51.54 (1).jpeg",
   },
@@ -139,7 +143,9 @@ const shuffledRest = shuffleArray(restItems);
 const finalMedia = [firstItem, ...shuffledRest];
 
 let activeIndex = 0;
-const INITIAL_SHOW_COUNT = 4; // initially show 4 items
+const getInitialShowCount = () => {
+  return window.matchMedia("(max-width: 900px)").matches ? 4 : 6;
+};
 let showingAll = false;
 
 const galleryGrid = document.querySelector("#Gallery-Grid");
@@ -159,7 +165,7 @@ const renderGallery = () => {
     if (media.type === "video") {
       itemDiv.classList.add("video-item");
     }
-    if (index >= INITIAL_SHOW_COUNT) {
+    if (index >= getInitialShowCount()) {
       itemDiv.classList.add("hidden-item");
     }
 
@@ -263,7 +269,7 @@ if (galleryMoreBtn) {
       // Hide
       const allItems = galleryGrid.querySelectorAll(".gallery-item");
       allItems.forEach((item, index) => {
-        if (index >= INITIAL_SHOW_COUNT) {
+        if (index >= getInitialShowCount()) {
           item.classList.add("hidden-item");
         }
       });
