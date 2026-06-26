@@ -896,12 +896,22 @@ a {
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
-    padding-top: 7rem;
+    padding: 5.5rem 0 2rem;
+    gap: 2.5rem;
+  }
+
+  .hero-text {
+    padding: 0 5%;
   }
 
   .hero-image {
+    grid-row: 1;
     height: 50vh;
-    border-radius: 8px;
+    border-radius: 0;
+  }
+
+  .hero-image::after {
+    background: linear-gradient(to bottom, transparent 25%, #000000 95%) !important;
   }
 
   .services-header {
@@ -975,7 +985,7 @@ a {
 
   .hero {
     min-height: auto;
-    padding: 7rem 5% 3rem;
+    padding: 5.5rem 0 2rem;
   }
 
   .hero-title {
