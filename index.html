@@ -22,7 +22,7 @@
       <div id="Nav-Container">
         <a href="#home" class="nav-brand">
           <img
-            src="img/shitos-logo.jpg"
+            src="assets/img/shitos-logo.jpg"
             width="42px"
             height="42px"
             alt="shitos-logo"
@@ -76,7 +76,7 @@
         </div>
         <div class="hero-image">
           <img
-            src="img/shitos-logo.jpg"
+            src="assets/img/shitos-logo.jpg"
             alt="Shitos Barber — taglio in corso"
           />
         </div>
@@ -138,21 +138,14 @@
         <div class="section-wrap">
           <p class="section-label">I NOSTRI LAVORI</p>
           <h2 class="section-heading">FRESCHI DI POLTRONA.</h2>
-          <div class="work-grid">
-            <div class="work-item work-tall">
-              <div class="work-placeholder">
-                <img src="img/shitos-logo.jpg" alt="Taglio 1" />
-              </div>
+          <div class="gallery-container">
+            <div id="Gallery-Grid" class="gallery-grid">
+              <!-- Populated dynamically via JS -->
             </div>
-            <div class="work-item work-featured">
-              <div class="work-placeholder">
-                <img src="img/shitos-word.png" alt="Taglio 2" />
-              </div>
-            </div>
-            <div class="work-item work-tall">
-              <div class="work-placeholder">
-                <img src="img/shitos-logo.jpg" alt="Taglio 3" />
-              </div>
+            <div class="gallery-more-btn-wrap">
+              <button id="Gallery-More-Btn" class="btn btn-outline">
+                VISUALIZZA ALTRO
+              </button>
             </div>
           </div>
         </div>
@@ -535,6 +528,16 @@
         <p class="footer-copy">© 2026 Shitos Barber · Milano</p>
       </div>
     </footer>
+
+    <!-- Lightbox Container -->
+    <div id="Lightbox" class="lightbox">
+      <button class="lightbox-close" aria-label="Chiudi lightbox">✕</button>
+      <button class="lightbox-prev" aria-label="Precedente">◀</button>
+      <div class="lightbox-content">
+        <!-- Active image or video goes here -->
+      </div>
+      <button class="lightbox-next" aria-label="Successivo">▶</button>
+    </div>
 
     <script src="js/script.js"></script>
   </body>
