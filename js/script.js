@@ -1,3 +1,13 @@
+// Handle Loader
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  if (loader) {
+    setTimeout(() => {
+      loader.classList.add("hidden");
+    }, 1500);
+  }
+});
+
 const navContainer = document.querySelector("#Nav-Container");
 
 /**
