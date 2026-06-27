@@ -139,7 +139,20 @@ const shuffleArray = (array) => {
 // Shuffling excluding the first item (main.mp4)
 const firstItem = galleryMedia[0];
 const restItems = galleryMedia.slice(1);
-const shuffledRest = shuffleArray(restItems);
+
+let shuffledRest;
+const savedOrder = sessionStorage.getItem("galleryOrder");
+
+if (savedOrder) {
+  const orderIndices = JSON.parse(savedOrder);
+  shuffledRest = orderIndices.map((index) => restItems[index]);
+} else {
+  const indices = restItems.map((_, i) => i);
+  const shuffledIndices = shuffleArray(indices);
+  shuffledRest = shuffledIndices.map((index) => restItems[index]);
+  sessionStorage.setItem("galleryOrder", JSON.stringify(shuffledIndices));
+}
+
 const finalMedia = [firstItem, ...shuffledRest];
 
 let activeIndex = 0;
@@ -255,6 +268,36 @@ window.addEventListener("keydown", (e) => {
     closeLightbox();
   }
 });
+
+// Swipe navigation for lightbox
+let touchStartX = 0;
+let touchEndX = 0;
+
+lightbox.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+lightbox.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
+
+const handleSwipe = () => {
+  const swipeThreshold = 50;
+  if (touchStartX - touchEndX > swipeThreshold) {
+    // Swiped left -> Next
+    if (activeIndex < finalMedia.length - 1) {
+      activeIndex++;
+      updateLightboxContent();
+    }
+  } else if (touchEndX - touchStartX > swipeThreshold) {
+    // Swiped right -> Prev
+    if (activeIndex > 0) {
+      activeIndex--;
+      updateLightboxContent();
+    }
+  }
+};
 
 // "Visualizza altro" button logic
 if (galleryMoreBtn) {
