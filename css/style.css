@@ -715,33 +715,6 @@ a {
   transform: scale(1.03);
 }
 
-.gallery-item.video-item::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.6);
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path d="M8 5v14l11-7z"/></svg>');
-  background-size: 28px 28px;
-  background-position: calc(50% + 2px) 50%;
-  background-repeat: no-repeat;
-  border: 2px solid var(--white);
-  border-radius: 50%;
-  opacity: 0.8;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-
-.gallery-item.video-item:hover::after {
-  opacity: 1;
-  background-color: var(--brand-red);
-  border-color: var(--brand-red);
-  box-shadow: var(--red-glow);
-}
-
 .gallery-item.hidden-item {
   display: none;
 }
