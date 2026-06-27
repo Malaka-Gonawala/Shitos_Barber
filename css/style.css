@@ -1186,8 +1186,13 @@ a {
 
 .social-buttons {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
-  flex-wrap: wrap;
+}
+
+.social-buttons .btn {
+  width: 100%;
+  justify-content: center;
 }
 
 @media (max-width: 900px) {
